@@ -1,0 +1,29 @@
+{
+    "include": [
+        "vite.config.*",
+        "eslint.config.*",
+        "env.d.ts",
+        "./src/**/*.ts", 
+        "./src/**/*.tsx",
+        "./src/**/*.vue", 
+        "./src/**/*.js"
+    ],
+    "compilerOptions": {
+        "types": ["vite/client"],
+        "lib": ["es2023", "dom", "dom.iterable"],
+        "module": "node16",
+        "target": "es2022",
+        "outDir": "./public/",  
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "moduleResolution": "node16",
+        "noEmit": true,
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "paths": {
+            "@/*": ["./src/*"],
+            "#/*": ["./public/*"]
+        }
+    }
+}
